@@ -1,0 +1,26 @@
+{
+  "configuration": {
+    "appenders": {
+      "File": {
+        "name": "RollingFileAppender",
+        "fileName": "enrichment.log",
+        "JsonTemplateLayout": {
+          "eventTemplateUri": "classpath:log-template.json",
+          "eventTemplateAdditionalFields": [{
+            "key": "message",
+            "value": "${json:message}",
+            "format": "JSON"
+          }]
+        }
+      }
+    },
+    "loggers": {
+      "root": {
+        "level": "DEBUG",
+        "appenderRef": {
+          "ref": "RollingFileAppender"
+        }
+      }
+    }
+  }
+}

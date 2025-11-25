@@ -1,0 +1,7 @@
+{
+  "message": {
+    "$resolver": "message",
+    "stringified": false
+  },
+  "host":  "${hostName}"
+}
